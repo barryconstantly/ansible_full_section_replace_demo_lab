@@ -39,10 +39,10 @@
       - "full_section == 'Full'"
     uri:
       # deviced_archive_file_path looks like this '/api/netim/v1/archives/281533/file'
-      url: "https://10.1.150.232:8543 {{device_archive_file_path}} "
+      url: "ttps://cell8-psdemonetim1.psdemo.net:8543 {{device_archive_file_path}} "
       method: GET
-      url_username: scadmin
-      url_password: R3st0nVA
+      url_username: bconstantine
+      url_password: password1234
       force_basic_auth: yes
       validate_certs: no
       # This forces content to be returned, if not specified and JSON is present, then JSON will be returned
@@ -85,10 +85,10 @@
       - "full_section == 'Section'"
     napalm_install_config:
       hostname: '{{ inventory_hostname }}'
-      username: admin
-      password: riverbed
+      username: ansible
+      password: ansible123
 #      optional_args: {'secret': 'riverbed', 'inline_transfer': 'True'}
-      optional_args: {'secret': 'riverbed', 'inline_transfer': 'True', 'global_delay_factor': 4, 'session_log':'/tmp/{{ inventory_hostname}}_napalm.log'}
+      optional_args: {'secret': 'ansible123', 'inline_transfer': 'True', 'global_delay_factor': 4, 'session_log':'/tmp/{{ inventory_hostname}}_napalm.log'}
       dev_os: ios
       config_file: '/tmp/config_merge_file.txt'
 #      config_file: '/home/centos/flask/config_merge_file.txt'
